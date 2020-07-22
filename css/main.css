@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background: #222222;
+  color: aliceblue;
+  font-family: 'Futura', sans-serif;
+}
+
+.time {
+  position: absolute;
+  right: 80px;
+  bottom: 3vh;
+}
+
+#hour {
+  position: absolute;
+  font-size: 6rem;
+  text-align: right;
+  letter-spacing: -.15rem;
+  right: 0;
+  bottom: 20px;
+}
+
+#min {
+  position: absolute;
+  font-size: 3rem;
+  text-align: left;
+  right: -30px;
+  bottom: 90px;
+}
+
+@media screen and (max-width: 450px) {
+  .time {
+    top: 30%;
+    left: 17%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
