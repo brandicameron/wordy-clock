@@ -36,9 +36,9 @@ body {
 #min {
   position: absolute;
   font-size: 3rem;
-  text-align: left;
-  right: -35px;
-  bottom: 90px;
+  text-align: right;
+  right: -20px;
+  bottom: 110px;
   letter-spacing: -.15rem;
 }
 
@@ -46,8 +46,8 @@ body {
   position: absolute;
   font-size: 1rem;
   text-align: left;
-  right: -55px;
-  bottom: 110px;
+  right: -45px;
+  bottom: 128px;
   opacity: .5;
   color: #657ac5;
 }
