@@ -37,8 +37,9 @@ body {
   position: absolute;
   font-size: 3rem;
   text-align: left;
-  right: -30px;
+  right: -35px;
   bottom: 90px;
+  letter-spacing: -.15rem;
 }
 
 #sec {
