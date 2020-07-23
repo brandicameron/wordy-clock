@@ -1,9 +1,7 @@
 const hourDisplay = document.getElementById('hour');
 const minDisplay = document.getElementById('min');
-const getTheMinutes = new Date().getMinutes().toLocaleString('en-US', {
-      minimumIntegerDigits: 2,
-      useGrouping: false
-    });
+const secDisplay = document.getElementById('sec');
+const smoke = document.getElementById('smoke');
 
 function hoursAsWords() {
   const hours = new Date().getHours();
@@ -79,7 +77,7 @@ function hoursAsWords() {
       break;
     case 24:
       return 'twelve';
-  }
+  };
 };
 hoursAsWords();
 
@@ -93,7 +91,7 @@ function changeNoon() {
   } else {
     minDisplay.style.display = 'block';
   };
-}
+};
 
 function changeOClock() {
   if (new Date().getMinutes().toLocaleString('en-US', {
@@ -102,29 +100,42 @@ function changeOClock() {
     }) === '00') {
     minDisplay.textContent = 'o\'clock';
   };
-}
+};
 
-function thirty() {
+function changeThirty() {
   if (new Date().getMinutes().toLocaleString('en-US', {
-      minimumIntegerDigits: 2,
-      useGrouping: false
-    }) === '30') {
+      minimumIntegerDigits: 2,useGrouping: false}) === '30') {
     minDisplay.textContent = 'thirty';
   };
-}
+};
+
+//420 easter egg
+function fourtwenty() {
+  const allTime = document.getElementById('time');
+  const getmins = new Date().getMinutes().toLocaleString('en-US', {
+      minimumIntegerDigits: 2,useGrouping: false});
+  
+  if (getmins === '24' && new Date().getHours() === 12) {
+    allTime.classList.add('fourtwenty');
+    smoke.classList.add('show');
+  } else {
+    allTime.classList.remove('fourtwenty');
+    smoke.classList.remove('show');
+  };
+};
 
 function displayTime() {
   hourDisplay.textContent = hoursAsWords();
   minDisplay.textContent = new Date().getMinutes().toLocaleString('en-US', {
-    minimumIntegerDigits: 2,
-    useGrouping: false
-  });
+    minimumIntegerDigits: 2,useGrouping: false});
+  secDisplay.textContent = new Date().getSeconds().toLocaleString('en-US', {minimumIntegerDigits: 2,useGrouping: false});
   changeNoon();
   changeOClock();
-  thirty();
-}
+  changeThirty();
+  fourtwenty();
+};
 
-//update the time automatically
+// Updates the time
 window.onload = function () {
   setInterval(displayTime, 500);
 };
