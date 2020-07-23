@@ -115,7 +115,7 @@ function fourtwenty() {
   const getmins = new Date().getMinutes().toLocaleString('en-US', {
       minimumIntegerDigits: 2,useGrouping: false});
   
-  if (getmins === '24' && new Date().getHours() === 12) {
+  if (getmins === '20' && new Date().getHours() === 16) {
     allTime.classList.add('fourtwenty');
     smoke.classList.add('show');
   } else {

@@ -29,8 +29,8 @@ body {
   font-size: 6rem;
   text-align: right;
   letter-spacing: -.15rem;
-  right: 0;
-  bottom: 20px;
+  right: 20px;
+  bottom: 45px;
 }
 
 #min {
@@ -53,8 +53,8 @@ body {
 
 .smoke {
   position: absolute;
-  right: -20px;
-  bottom: 65px;
+  right: -65px;
+  bottom: 88px;
   filter: grayscale() opacity(.6);
   z-index: -1;
   display: none;
@@ -65,10 +65,15 @@ body {
 }
 
 @media screen and (max-width: 450px) {
-
+ 
   .time {
     position: absolute;
     bottom: 35%;
     right: 17vw;
+  }
+  
+  .smoke {
+    bottom: 346px;
+    right: -70px;
   }
 }
