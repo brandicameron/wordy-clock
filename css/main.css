@@ -55,7 +55,7 @@ body {
 .smoke {
   position: absolute;
   right: -65px;
-  bottom: 88px;
+  bottom: 90px;
   filter: grayscale() opacity(.6);
   z-index: -1;
   display: none;
