@@ -70,11 +70,11 @@ body {
   .time {
     position: absolute;
     bottom: 35%;
-    right: 17vw;
+    right: 20vw;
   }
   
   .smoke {
     bottom: 48%;
-    right: -70px;
+    right: -65px;
   }
 }
