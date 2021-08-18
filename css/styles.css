@@ -1,0 +1,67 @@
+:root {
+  --shadow-color: #5448ff;
+  --accent-shadow-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #020102;
+  font-family: obviously-narrow,  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  max-width: 80vw;
+}
+
+h1 {
+  color: #181818;
+  text-align: center;
+  font-size: clamp(4.5rem, 16vw, 12rem);
+  margin-left: -50px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--accent-shadow-color);
+  filter: drop-shadow(2px 2px 0px var(--shadow-color))
+    drop-shadow(2px 2px 0px var(--accent-shadow-color))
+    drop-shadow(3px 3px 0px var(--shadow-color))
+    drop-shadow(4px 4px 0px var(--accent-shadow-color))
+    drop-shadow(5px 5px 0px var(--shadow-color))
+    drop-shadow(6px 6px 0px var(--accent-shadow-color))
+    drop-shadow(7px 7px 0px var(--shadow-color))
+    drop-shadow(8px 8px 0px var(--accent-shadow-color))
+    drop-shadow(9px 9px 0px var(--shadow-color))
+    drop-shadow(10px 10px 0px var(--accent-shadow-color));
+}
+
+.smoke {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: grayscale() opacity(0.6);
+  z-index: -1;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    display: inline-block;
+  }
+}
